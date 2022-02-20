@@ -1,0 +1,252 @@
+/* Сброс настроек по умолчанию */
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* .allTwitters {
+  width: 200px;
+  background-color: burlywood;
+} */
+
+/* Сброс стилей */
+div {
+  display: inline;
+}
+/* display: inline-block; */
+.header,
+nav,
+main,
+div,
+footer {
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+#pageHeader {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+}
+
+#mainNav {
+  grid-area: nav;
+}
+
+#pageMain {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #000;
+  padding-left: 10px;
+}
+
+#pageFooter {
+  grid-area: footer;
+}
+
+#pageButtonAllTwits {
+  display: flex;
+  flex-direction: column;
+  width: 12;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+#page {
+  display: grid;
+  grid-template-areas:
+    ". header header ."
+    ". nav    main   ."
+    ". footer footer .";
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-columns: 5% 15% 70% 5%;
+  grid-gap: 20px;
+  height: 100vh;
+  margin: 0;
+}
+
+/* #pageMain {
+  display: flex;
+  flex-direction: column;
+} */
+
+.section {
+  margin-right: 50px;
+}
+
+/* .textReg {
+  text-align: center;
+  font-size: 30px;
+} */
+
+.input-form {
+  display: block;
+  padding: 10px 54px;
+}
+
+.input-form label {
+  width: 200px;
+  display: inline-flex;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-form-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.block-message {
+  display: block;
+  border-top: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
+  padding: 0 0 10px 0;
+}
+
+.block-message-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.block-new-twit {
+  display: block;
+  box-sizing: border-box;
+}
+
+.block-new-twit-input {
+  display: flex;
+}
+.block-new-twit-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 0 10px;
+}
+
+.block-input {
+  flex: 2;
+  width: 100%;
+}
+.block-input-80 {
+  width: 80%;
+}
+
+.block-input-90 {
+  width: 90%;
+}
+
+.header-div {
+  font-size: 30px;
+}
+
+.div-reg {
+  margin: 10px 40px;
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.form-reg {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form-reg-name {
+  margin: 10px;
+  flex: 1;
+}
+
+.form-reg-mail {
+  margin: 10px;
+  flex: 1;
+}
+
+.form-reg {
+  padding: 0 0 30px 0;
+  border-bottom: 1px solid #000;
+}
