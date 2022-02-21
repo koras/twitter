@@ -88,7 +88,7 @@ div {
   display: inline;
 }
 /* display: inline-block; */
-.header,
+/* .header,
 nav,
 main,
 div,
@@ -96,7 +96,7 @@ footer {
   border: 2px;
   border-style: solid;
   border-color: black;
-}
+} */
 
 #pageHeader {
   grid-area: header;
@@ -238,15 +238,32 @@ footer {
 
 .form-reg-name {
   margin: 10px;
-  flex: 1;
+  display: flex;
+  align-content: space-between;
 }
 
 .form-reg-mail {
   margin: 10px;
-  flex: 1;
+  display: flex;
+  align-content: space-between;
 }
 
 .form-reg {
   padding: 0 0 30px 0;
   border-bottom: 1px solid #000;
+  display: flex;
+}
+
+#name {
+  flex: 1;
+  margin: 0 0 0 18px;
+}
+
+#mail {
+  flex: 1;
+  margin: 0 0 0 6px;
+}
+
+#button-reg {
+  margin: 0 10px 0 0;
 }

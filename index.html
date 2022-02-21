@@ -16,7 +16,12 @@
 
       <nav id="mainNav">
         <div id="pageButtonAllTwits">
-          <button id="buttonAllTwits">Все твиты</button>
+          <button
+            id="buttonAllTwits"
+            onclick="window.location.href = 'index2.html';"
+          >
+            Все твиты
+          </button>
         </div>
       </nav>
       <main id="pageMain">
@@ -26,24 +31,16 @@
         <form class="form-reg-base" action="">
           <div class="form-reg">
             <div class="form-reg-name">
-              <div>
-                <label for="name">Ваше имя</label>
-              </div>
-              <div>
-                <input id="name" class="block-input-90" required type="text" />
-              </div>
+              <label for="name">Ваше имя</label>
+              <input id="name" required type="text" />
             </div>
 
             <div class="form-reg-mail">
-              <div>
-                <label for="mail">Ваша почта</label>
-              </div>
-              <div>
-                <input id="mail" class="block-input-90" required type="text" />
-              </div>
+              <label for="mail">Ваша почта</label>
+              <input id="mail" required type="text" />
             </div>
             <div class="input-form-button">
-              <button>Зарегистрироваться</button>
+              <button id="button-reg">Зарегистрироваться</button>
             </div>
           </div>
         </form>
